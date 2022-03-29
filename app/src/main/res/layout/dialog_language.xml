@@ -31,11 +31,14 @@
             android:textStyle="bold" />
 
         <TextView
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:id="@+id/tv_english"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@drawable/round_button_lang"
+            android:background="@drawable/btn_bg"
             android:gravity="center"
             android:elevation="3dp"
             android:padding="13dp"
@@ -43,28 +46,35 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:text="@string/english"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:id="@+id/tv_hindi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:background="@drawable/round_button_lang"
+            android:background="@drawable/btn_bg"
             android:gravity="center"
             android:padding="13dp"
             android:elevation="3dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:text="@string/hindi"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="16sp"
             android:fontFamily="@font/sans"
             android:textStyle="bold" />
 
         <TextView
+            android:visibility="gone"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:id="@+id/tvArabic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -82,6 +92,9 @@
             android:textStyle="bold" />
 
         <TextView
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
             android:id="@+id/tv_cancel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -95,7 +108,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="10dp"
             android:text="@string/cancel"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/black"
             android:fontFamily="@font/sans"
             android:textSize="16sp"
             android:textStyle="bold" />

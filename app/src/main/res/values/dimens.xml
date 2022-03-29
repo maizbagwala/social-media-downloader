@@ -17,4 +17,5 @@
     <dimen name="home_app_title">16sp</dimen>
     <dimen name="home_tag_line">13sp</dimen>
     <dimen name="home_item_txt_size">16sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

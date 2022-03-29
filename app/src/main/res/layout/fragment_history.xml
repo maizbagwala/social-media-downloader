@@ -18,16 +18,16 @@
             android:id="@+id/swiperefresh"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_fileList"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scrollbars="vertical"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:spanCount="3"
-                tools:listitem="@layout/items_file_view"
+                app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
                 app:reverseLayout="false"
-                />
+                app:spanCount="2"
+                tools:listitem="@layout/items_file_view" />
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     </RelativeLayout>

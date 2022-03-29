@@ -7,113 +7,75 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="@drawable/bg">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_above="@+id/adView">
+
 
             <RelativeLayout
+                android:layout_above="@id/adView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
-
                 <RelativeLayout
-                    android:id="@+id/RLTopLayout"
+                    android:id="@+id/appbar_about"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:background="@drawable/rectangle_blue"
-                    android:visibility="visible">
+                    android:layout_height="70dp"
+                    >
+
                     <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:id="@+id/rl_back_about"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
                         <ImageView
-                            android:id="@+id/imBack"
+                            android:id="@+id/imBack_about"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_margin="10dp"
+                            android:layout_centerVertical="true"
                             android:padding="5dp"
-                            android:layout_centerVertical="true"
                             android:src="@drawable/ic_back" />
-                        <ImageView
-                            android:id="@+id/imInfo"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_margin="10dp"
-                            android:padding="10dp"
-                            android:visibility="gone"
-                            android:src="@drawable/ic_about"
-                            android:tint="@color/white"
-                            android:layout_centerVertical="true"
-                            android:layout_alignParentEnd="true"/>
-                    </RelativeLayout>
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="300dp">
-                        <RelativeLayout
-                            android:id="@+id/LLOpenInstagram"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:background="@drawable/rectangle_white"
-                            android:layout_marginStart="15dp"
-                            android:layout_marginEnd="15dp"
-                            android:padding="30dp"
-                            android:layout_centerVertical="true">
 
-                            <ImageView
-                                android:id="@+id/IMIcon"
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
-                                android:layout_centerHorizontal="true"
-                                android:src="@drawable/logo" />
 
-                            <TextView
-                                android:id="@+id/TVTitle"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@+id/IMIcon"
-                                android:layout_centerHorizontal="true"
-                                android:text="@string/app_name"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="@dimen/about_us_title"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@+id/TVTitle"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginTop="5dp"
-                                android:text="@string/tag_line"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="@dimen/about_us_tag_line"
-                                android:id="@+id/tvTagLine"
-                                android:textStyle="bold" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_below="@+id/tvTagLine"
-                                android:layout_centerHorizontal="true"
-                                android:layout_marginTop="5dp"
-                                android:text="@string/version_tag"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="@dimen/about_version_txt_size"
-                                android:textStyle="bold" />
-
-                        </RelativeLayout>
                     </RelativeLayout>
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/app_name"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/imInfo"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_about"
+                        android:visibility="gone"
+                        ads:tint="@color/white" />
                 </RelativeLayout>
 
+
                 <LinearLayout
+                    android:elevation="2dp"
+                    android:background="@drawable/rectangle_white"
                     android:id="@+id/lnr_main"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/RLTopLayout"
-                    android:layout_marginTop="-50dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/appbar_about"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginBottom="10dp"
                     android:orientation="vertical"
                     android:paddingStart="10dp"
                     android:paddingEnd="10dp"
@@ -125,6 +87,7 @@
                         android:layout_height="100dp"
                         android:layout_marginStart="5dp"
                         android:layout_marginEnd="5dp"
+                        android:visibility="gone"
                         android:background="@drawable/rectangle_white"
                         android:elevation="3dp">
 
@@ -184,22 +147,21 @@
                     <RelativeLayout
                         android:id="@+id/RLEmail"
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="5dp"
-                        android:background="@drawable/rectangle_white"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@drawable/rectangle_white_corner"
                         android:elevation="3dp">
 
                         <ImageView
                             android:id="@+id/imEmail"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
                             android:layout_centerVertical="true"
                             android:layout_marginStart="10dp"
-                            android:background="@drawable/circle"
-                            android:padding="12dp"
-                            android:src="@drawable/ic_mail" />
+                            android:src="@drawable/ic_mail"
+                            ads:tint="#D4BAE4" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -225,7 +187,6 @@
                                 android:elevation="3dp"
                                 
                                 android:text="@string/email_tag"
-                                android:textColor="@color/colorPrimaryDark"
                                 android:textSize="@dimen/about_below_txt_size" />
                         </LinearLayout>
 
@@ -246,6 +207,7 @@
                         android:layout_marginStart="5dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="5dp"
+                        android:visibility="gone"
                         android:background="@drawable/rectangle_white"
                         android:elevation="3dp">
 
@@ -300,22 +262,22 @@
                     <RelativeLayout
                         android:id="@+id/RLPrivacyPolicy"
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
-                        android:layout_marginStart="5dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
-                        android:layout_marginEnd="5dp"
-                        android:background="@drawable/rectangle_white"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/rectangle_white_corner"
                         android:elevation="3dp">
 
                         <ImageView
                             android:id="@+id/imPrivacyPolicy"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
                             android:layout_centerVertical="true"
                             android:layout_marginStart="10dp"
-                            android:background="@drawable/circle"
-                            android:padding="12dp"
-                            android:src="@drawable/ic_website" />
+                            android:src="@drawable/ic_website"
+                            ads:tint="#D4BAE4" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -343,7 +305,6 @@
                                 
                                 android:gravity="center"
                                 android:text="@string/privacy_tag"
-                                android:textColor="@color/colorPrimaryDark"
                                 android:textSize="@dimen/about_below_txt_size" />
                         </LinearLayout>
 
@@ -363,6 +324,7 @@
                         android:layout_marginStart="5dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="5dp"
+                        android:visibility="gone"
                         android:layout_marginBottom="10dp"
                         android:background="@drawable/rectangle_white"
                         android:elevation="3dp">
@@ -419,8 +381,15 @@
 
                 </LinearLayout>
             </RelativeLayout>
-        </ScrollView>
-
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/admob_banner_about_id">
+        </com.google.android.gms.ads.AdView>
 <!--        <com.google.android.gms.ads.AdView-->
 <!--            android:id="@+id/adView"-->
 <!--            android:layout_width="match_parent"-->

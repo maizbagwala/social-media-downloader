@@ -7,6 +7,7 @@
     android:id="@+id/LLHowToLayout"
     android:layout_margin="10dp"
     android:elevation="3dp"
+    android:visibility="gone"
     android:background="@drawable/rectangle_white"
     android:orientation="vertical">
 

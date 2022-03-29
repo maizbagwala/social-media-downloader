@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#021B2A</color>
-    <color name="colorPrimaryDark">#FF1E1E</color>
+<!--    <color name="colorPrimaryDark">#FF1E1E</color>-->
+    <color name="colorPrimaryDark">#2BAE66</color>
     <color name="cld">#1E5DFF</color>
     <color name="colorAccent">#407806</color>
+<!--    <color name="colorAccent">#000</color>-->
     <color name="white">#FFFFFF</color>
     <color name="black">#000</color>
     <color name="transparent">#00000000</color>
@@ -17,4 +19,9 @@
     <color name="black_transparent">#40000000</color>
     <color name="splash_text">#7ffb00</color>
     <color name="whatsapp_color">#3DE25C</color>
+    <color name="twitter_color">#1DA1F2</color>
+    <color name="facebook_color">#4267B2</color>
+    <color name="instagram_color">#8a3ab9</color>
+    <color name="btn_color">#F2EAFC</color>
+    <color name="youtube_color">#ff0000</color>
 </resources>

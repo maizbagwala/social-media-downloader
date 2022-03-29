@@ -20,6 +20,7 @@
     <string name="tiktok_app_name">TikTok</string>
     <string name="tiktok_tag">تحميل فيديوهات تيك توك</string>
     <string name="facebook_app_name">Facebook</string>
+    <string name="youtube_app_name">YouTube</string>
     <string name="fcebook_tag">تحميل فيديوهات فيس بوك</string>
     <string name="twitter_app_name">Twitter</string>
     <string name="twitter_tag"><![CDATA[تحميل صور وفيديوهات تويتر]]></string>
@@ -71,13 +72,13 @@
     <string name="version_name">الإصدار</string>
     <string name="version_tag">Version 1.0.0</string>
     <string name="company_name_title">شركة</string>
-    <string name="company_tag_name">Coding Dunia</string>
+    <string name="company_tag_name">Maaiz bagwala</string>
     <string name="email_title">البريد الإلكتروني</string>
-    <string name="email_tag">codingdunia2019@gmail.com</string>
+    <string name="email_tag">maizmb1@gmail.com</string>
     <string name="website_title">تابعنا</string>
-    <string name="website_tag">http://codingdunia.com/</string>
+    <string name="website_tag"> </string>
     <string name="contact_title">تواصل معنا</string>
-    <string name="contact_tag">+91-9876543210</string>
+    <string name="contact_tag"> </string>
 
     <string name="privacy_title">سياسة الخصوصية</string>
     <string name="privacy_tag">أنقر لقراءة سياسة الخصوصية  </string>

@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.gmail.maizmb1.social">
+    package="tk.maizbagwala.social">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<!--    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />-->
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.Ad_ID" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" tools:node="remove"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29" />
 
     <application
-        android:name="com.gmail.maizmb1.social.MyApplication"
+        android:name="tk.maizbagwala.social.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,34 +27,44 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
-
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.gmail.maizmb1.social.activity.LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.gmail.maizmb1.social.activity.AboutUsActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="com.gmail.maizmb1.social.activity.FacebookActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="com.gmail.maizmb1.social.activity.TikTokActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="com.gmail.maizmb1.social.activity.WhatsappActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="com.gmail.maizmb1.social.activity.InstagramActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name="com.gmail.maizmb1.social.activity.FullViewActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.gmail.maizmb1.social.activity.LikeeActivity"
+            android:name="tk.maizbagwala.social.activity.YoutubeActivity"
+            android:exported="true"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name="com.gmail.maizmb1.social.activity.SplashScreen"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name="tk.maizbagwala.social.activity.SettingActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="tk.maizbagwala.social.activity.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="tk.maizbagwala.social.activity.AboutUsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="tk.maizbagwala.social.activity.FacebookActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="tk.maizbagwala.social.activity.TikTokActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="tk.maizbagwala.social.activity.WhatsappActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="tk.maizbagwala.social.activity.InstagramActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="tk.maizbagwala.social.activity.FullViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="tk.maizbagwala.social.activity.LikeeActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="tk.maizbagwala.social.activity.SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -54,11 +72,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.gmail.maizmb1.social.activity.GalleryActivity"
+            android:name="tk.maizbagwala.social.activity.GalleryActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.gmail.maizmb1.social.activity.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name="tk.maizbagwala.social.activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -82,10 +101,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.gmail.maizmb1.social.activity.WebviewAcitivity"
+            android:name="tk.maizbagwala.social.activity.WebviewAcitivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.gmail.maizmb1.social.activity.TwitterActivity"
+            android:name="tk.maizbagwala.social.activity.TwitterActivity"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
@@ -93,7 +112,7 @@
             android:value="@string/admob_app_id" />
 
         <service
-            android:name="com.gmail.maizmb1.social.MyFirebaseMessagingService"
+            android:name="tk.maizbagwala.social.MyFirebaseMessagingService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -107,6 +126,17 @@
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorPrimaryDark" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <meta-data
+            android:name="com.startapp.sdk.APPLICATION_ID"
+            android:value="200533945" />
+<!--        to disable return ad-->
+<!--        <meta-data -->
+<!--            android:name="com.startapp.sdk.RETURN_ADS_ENABLED" -->
+<!--            android:value="false" />-->
+
     </application>
 
 </manifest>

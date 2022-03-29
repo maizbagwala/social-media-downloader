@@ -65,6 +65,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/tvArabic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
